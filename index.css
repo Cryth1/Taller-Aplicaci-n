@@ -1,0 +1,11 @@
+.tabla-propietarios{
+    width: initial;
+}
+.formulario{
+   float: inline-end;
+    
+}
+
+.agregarMascotas{
+    display: none;
+}

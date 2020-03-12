@@ -35,17 +35,42 @@ function agregarPropietario() {
 }
 
 function agregarMascota(){
+
+    $('form input[id=agregarM]').on('click', function(e){
+
+    e.preventDefault();
+
+    var nombre = $("#nombreM");
+    var tipo = $("select[id=tipo]");
+    var fechaN = $("#fechaN");
+
+    
+
+
+    $('#mascotas').append("<tr>" +
+        "<td>" + nombre.val() + "</td>" +
+        "<td>" + tipo.val() + "</td>" + 
+        "<td>" + fechaN.val() + "</td>");
+
+        nombre.val=('');
+        tipo.val=('');
+        fechaN.val=('');
+
+
+    })
+
+
+
     
 }
 
 function mostrarAgregarMascota(){
     $('#propietarios').on('click', '.agregarMascota', function(e){
-        console.log("VICIO");
         e.preventDefault();
-
+       
         $('.agregarMascotas').show();
-
-        
+       
+       
 
 
     })
